@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Kokoro TTS Web App</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; }
+        textarea { width: 100%; height: 120px; }
+        select, button { padding: 6px; margin-top: 10px; }
+        audio { margin-top: 20px; display: block; }
+    </style>
+</head>
+<body>
+    <h1>Kokoro TTS - テキスト読み上げ</h1>
+    <form method="post">
+        <label>テキスト：</label><br>
+        <textarea name="text" required placeholder="テキストを入力してください"></textarea><br>
+
+        <label>ボイス選択：</label><br>
+        <select name="voice" required>
+            {% for id, name in voices.items() %}
+                <option value="{{ id }}">{{ name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">音声を生成</button>
+    </form>
+
+    {% if output_file %}
+        <h2>生成結果</h2>
+        <audio controls>
+            <source src="{{ output_file }}" type="audio/wav">
+        </audio>
+        <a href="/download/{{ output_file }}">音声をダウンロード</a>
+    {% endif %}
+</body>
+</html>

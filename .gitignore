@@ -1,0 +1,105 @@
+# ===============================
+# Python & Flask App .gitignore
+# ===============================
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- Virtual Environment ----
+venv/
+env/
+.venv/
+ENV/
+.ENV/
+
+# ---- Flask / Local Files ----
+instance/
+*.db
+*.sqlite3
+*.sqlite
+*.log
+
+# ---- CSV Data ----
+*.csv
+
+# ---- Uploaded Files ----
+uploads/
+static/uploads/
+
+# ---- OS・Editor ----
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+
+# ---- VSCode ----
+.vscode/
+*.code-workspace
+
+# ---- Python Tools ----
+*.pyo
+*.pyd
+*.so
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+
+# ---- Cache / Temp ----
+.cache/
+tmp/
+temp/
+
+# ---- Compiled ----
+*.exe
+*.dll
+*.o
+*.a
+*.out
+
+# ---- Distribution / Packaging ----
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ---- Reports ----
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.coverage
+.cache/
+
+# ---- Secrets / Keys ----
+*.pem
+*.key
+*.crt
+*.json
+.env
+.env.*
+
+# ---- Node.js (もし使う場合) ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Mac / Windows ----
+Icon?
+ehthumbs.db
+desktop.ini
